@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="info()">click me</button> <br>
+    <input type="text" id="num1" placeholder="enter number1"> <br>
+    <input type="text" id="num2" placeholder="enter number2">
+    <button onclick="add()">add</button>
+    <p id="result"> result is</p>
+    <!-- 
+    compare three numbers and find the largest one
+    -->
+    <script>
+        // var a=Number(prompt("enter number 1:"))
+        // var b=Number(prompt("enter number 2:"))
+        // var c=Number(prompt("enter number 3:"))
+
+        // if(a>b && a>c){
+        //      document.write("a is greater"+a)
+        // }
+        // else if(b>a && b>c){
+        //     document.write("b is greater"+b)
+
+        // }
+        // else{
+        //     document.write("c is greater"+c)
+        // }
+
+
+        //electricity bill
+        //var unit=Number(prompt("enter unit of electricity"))
+        // 1-100 free
+        // 100-200 2rs
+        // 200-300 5rs
+        // 10 rs
+        // if(unit<100){
+        //     document.write("bill is free")
+        // }
+        // else if(unit<200){
+        //     var bill=unit*2
+        //     document.write("bill is 2rs"+bill)
+        // }
+        // else if(unit<300){
+        //     var bill=unit*5
+        //     document.write("bill is 5rs"+bill)
+        // }
+        // else{
+        //     var bill=unit*10
+        //     document.write("bill is 10rs"+bill)
+
+        // }
+
+        /*
+        assignment operators
+
+        = -> a=10
+        += ->a+=10 ->20
+        -= -> a-=2 ->18
+        *= ->a*=2 ->36
+        /=
+        %=
+        **=
+
+        */
+    //    var k=2
+    //    k+=10
+    //    document.write(k) //12
+    //    k/=3
+    //    document.write(k) //4
+    //    k*=2
+    //    document.write(k) //8
+
+
+
+    //    nested if 
+
+   
+
+
+    // functions 
+    function info(){
+        var marks12=Number(prompt("enter marks of 12th:"))
+    if(marks12>70){
+        alert("eligible for mains")
+        var marksMains=Number(prompt("enter marks of mains:"))
+        if(marksMains>60){
+            alert("eligible for jee advance")
+            var marksJee=Number(prompt("enter marks of jee advance:"))
+            if(marksJee>60){
+                alert("eligible for iit")
+                }
+            else{
+                alert("not eligible for iit")
+            }
+    }
+    else{
+        alert("not eligible forjee advance")
+    }
+}
+else{
+        alert("not eligible for mains")  
+    }
+
+    }
+    //  info()
+   
+    function add(){
+        var n1=Number(document.getElementById("num1").value) //get
+        var n2=Number(document.getElementById("num2").value)
+        // var input=document.getElementById("num1");
+        console.log(n1,n2)
+        // var c=n1+n2
+        document.getElementById("result").innerHTML=n1+n2 //set
+
+    }
+
+
+    </script>
+</body>
+</html>

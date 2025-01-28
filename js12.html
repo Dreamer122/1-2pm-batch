@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!-- let var const -->
+     <script>
+        "use strict"
+
+        var a=10;
+        a=20 // reassignment 
+        console.log(a)
+        var a=35 // redeclaration
+        console.log(a)
+
+        // let 
+
+        let k=23;
+        k=45 // reassignment
+       // let k=67 // redeclaration
+        console.log(k)
+
+        const pi=3.14; 
+       // pi=22/7 // reassignment'
+    //    const pi=22/7
+        console.log(pi)
+
+        // scope 
+
+
+        function fun(){
+            var username="sajid" // local
+            console.log("k=",k,"username=",username)
+            if(username=="sajid"){
+                // let fullname="sajid khan" // blocked scope
+                // const fullname="sajid khan" // blocked scope
+                fullname="sajid khan" // blocked scope
+                console.log("fullname",fullname)
+            }
+            console.log("fullname",fullname)
+
+        }
+fun()
+// console.log(username)
+// block
+     </script>
+</body>
+</html>

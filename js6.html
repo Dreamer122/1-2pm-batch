@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+    switch case()
+    loop->it is used to execute a statement or group statements
+       repeatedly untill the specified condition
+
+       types -> 
+       for loop
+       while loop
+       do-while loop
+     
+
+    -->
+       <input type="text" 
+       placeholder="enter age" id="box"> <br>
+       <button onclick="switchcase()">click</button>
+       <p id="show"></p>
+
+    <script>
+function switchcase(){
+    // var age=Number(document.getElementById("box").value)
+    var day=Number(document.getElementById("box").value)
+    switch(day){
+        case 1:
+            // document.getElementById("show").innerHTML="age is equal to 18 "
+            document.getElementById("show").innerHTML="Monday"
+            break;
+        case 2:
+            document.getElementById("show").innerHTML="Tuesday"
+            break;
+        case 3:
+            document.getElementById("show").innerHTML="Wednesday"
+            break;
+                
+        case 4:
+            document.getElementById("show").innerHTML="Thursday"
+            break;
+        case 5:
+        document.getElementById("show").innerHTML="Friday"
+        break;
+        case 6:
+            document.getElementById("show").innerHTML="Saturday"
+            break;
+        case 7:
+             document.getElementById("show").innerHTML="Sunday"
+                break
+
+
+        default :
+        document.getElementById("show").innerHTML="enter valid value between 1-7"
+        
+    }
+}
+
+// ternary operator 
+let age=12
+    // CONDITIONS?VALUE1:VALUE2
+    // let output= age>=18?"adult":"child"
+    let output= age>=18?age+1:age-1
+    console.log(output)
+
+
+// increment / decrement 
+let num=10
+// num+=1
+//num++ // num+=1
+console.log(num++) // 10,,11
+console.log(num)//11
+console.log(++num) //12
+console.log(num)
+
+num--
+console.log(num) //11
+console.log(--num) //10
+
+
+let x=2
+var y=x++ // y=2 x=3
+var z=++x //4
+console.log(y) 
+console.log(x) //3
+    </script>
+    
+
+
+</body>
+</html>

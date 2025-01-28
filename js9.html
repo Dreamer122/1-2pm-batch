@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num" placeholder="enter a number"> <br>
+    <button onclick="adddigits()"> click</button>
+    <p id="text"></p>
+    <!-- do while loop
+     
+    syntax -> 
+
+    do{
+    statements
+    }while(condition)
+    -->
+     <script>
+        
+        // var k=1;
+        // do{
+        //     document.write(k+"<br>")
+        //     k++; //2
+        // }while(k<1)
+
+        var k=10;
+        do{
+            document.write(k+"<br>")
+            k--; //9,8,7,2,1
+        }while(k>=1)
+
+
+        //  1,20, count -> odd  number
+        // 1-> odd 
+        var count=0
+        for(var i=1;i<=20;i++){
+            if(i%2!=0){ // 1,2,3,4,5
+                count=count+1 // 0+1=1+1=2+1=3
+
+            }
+        }
+        document.write("count of odd numbers=",count)
+
+        // 1,50 range 3 divisble weird , 5 divisble -> not weird , 3 or 5 both special number
+
+        var start=1
+        while(start<=50){
+            if(start%3==0 && start%5==0){
+                document.write(start+" is special number"+"<br>")
+            }
+            else if(start%5==0){
+                document.write(start+" not weird"+"<br>")
+            }
+            else if(start%3==0){
+                document.write(start+" weird"+"<br>")
+            }
+            else{
+                document.write(start+"<br>")
+            }
+            start++;
+        }
+
+
+        // 345 -> -> 3+4+5=12
+
+        function adddigits(){
+            var num= Number(document.getElementById("num").value);
+            var sum=0
+            while(num>0){
+                var rem=num%10 //345  -> 5 34%10 ->4 3%10 ->3
+                sum=sum+rem // 5+4=9+3=>12
+                num= parseInt(num/10) // 34/10 3.4 -> 3/10 -> 0.3->0
+
+            }
+            // document.write("sum of digits of number is "+sum)
+            document.getElementById("text").innerText="sum of digits of number is "+sum
+
+        }
+
+
+     </script>
+</body>
+</html>

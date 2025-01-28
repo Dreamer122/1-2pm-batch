@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P id="show"></P>
+<button onclick="wages()">click</button>
+    <script>
+        function wages(){
+            var age=Number(prompt("enter your age"))
+            var gender=prompt("enter gender M or F")
+            var days=Number(prompt("enter working days"))
+            if(age>=18 && age<30){
+                if(gender=="M"){
+                    var salary= days*700
+                    document.getElementById("show").innerHTML="salary="+salary
+                }
+                else if(gender=="F"){
+                    var salary= days*750
+                    document.getElementById("show").innerHTML="salary="+salary
+
+                }
+            }
+            else if(age>=30 && age<=40){
+                if(gender=="M"){
+                    var salary= days*800
+                    document.getElementById("show").innerHTML="salary="+salary
+            }
+            else if(gender=="F"){
+                var salary= days*850
+                document.getElementById("show").innerHTML="salary="+salary
+           
+            }
+        }
+        else{
+            alert("enter appropriate age 18-40")
+        }
+        }
+    </script>
+</body>
+</html>
