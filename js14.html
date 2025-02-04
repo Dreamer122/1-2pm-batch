@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function withdraw(amount, balance){
+        if (amount > balance) {
+            console.log("Insufficient funds");
+        }
+        else {
+            balance =balance-amount;
+            console.log("Withdrawal successful now balance is =",balance);
+        }
+    }
+    withdraw(2000,5000)
+
+    function calculate_salary(hours_worked, hourly_rate, overtime_hours){
+       let Regular_pay = hours_worked * hourly_rate
+       let Overtime_pay = overtime_hours * (1.5 * hourly_rate)
+       return Regular_pay+Overtime_pay
+
+    }
+    let amnt=calculate_salary(10,500,2)
+    console.log(amnt)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // array->ordered collection of heterogenous elements and every element 
+        // in array has a specific position called index
+        let arr=[7,8,4,67,"hello",67,4,8]
+        document.write(arr+"<br>")
+        // accessing elements in array using index
+        document.write(arr[2]+"<br>")
+        document.write(arr[2] +" "+ arr[3] + "<br>")
+
+        document.write(arr.length+"<br>")
+       let x= arr.indexOf(67,4)
+       document.write(x+"<br>")
+      document.write( arr.lastIndexOf(4)+"<br>")
+      document.write( arr.concat([89,90,122])+"<br>")
+      document.write( arr.includes("Hello")+"<br>")
+
+      arr.push("js",67)
+      document.write(arr+"<br>")
+      arr.unshift("react js")
+      document.write(arr+"<br>")
+      
+      arr.pop()
+      document.write(arr+"<br>")
+      arr.shift()
+      document.write(arr+"<br>")
+      // replacing
+      arr[3]="nodejs"
+      document.write(arr+"<br>")
+      
+      // splice(add , delete replace) splice(index,delete count,element)
+      
+      // add element
+      arr.splice(2,0,"express",500) // add
+    //   arr.splice(4,2) // delete
+    // replace
+    document.write(arr+"<br>")
+    arr.splice(6,1,567)
+    document.write(arr+"<br>")
+
+    let array=[7,8,90,56,34,12]
+
+    // slice 
+    let slicedArray=array.slice(1,4)
+    document.write("array="+slicedArray)
+
+    // loop 
+    // for of loop
+    for(let value of array){
+        document.write(value**2+"<br>")
+    }
+    // for loop 
+    for(let i=0;i<array.length;i++)
+{
+    document.write(array[i]+"<br>")
+}
+
+// for each
+let s=0
+array.forEach(function(v,i,a){
+    document.write(v+" "+i+"<br>")
+    s+=v
+
+})
+document.write("sum=",s)
+
+
+// sort 
+array.sort()
+document.write(array+"<br>")
+
+array.sort(function(a,b){return a-b})
+
+document.write(array+"<br>")
+
+let arr1=["hello","ajay","js","node","javascript"]
+arr1.sort()
+document.write(arr1+"<br>")
+
+
+
+    </script>
+</body>
+</html>

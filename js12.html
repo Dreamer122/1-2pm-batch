@@ -39,7 +39,7 @@
             if(username=="sajid"){
                 // let fullname="sajid khan" // blocked scope
                 // const fullname="sajid khan" // blocked scope
-                fullname="sajid khan" // blocked scope
+               var fullname="sajid khan" // blocked scope
                 console.log("fullname",fullname)
             }
             console.log("fullname",fullname)
@@ -48,6 +48,28 @@
 fun()
 // console.log(username)
 // block
+
+
+//  123 -> 321   121 -> 121 301  ->12.3
+
+function pallindrome(){
+    let num=Number(prompt("enter anumber"));
+    let original=num
+    let reverse=0
+    while(num>0){
+        let rem=num%10 // 3 , 2,1
+        reverse=reverse*10+rem // 0+3 =>30+2=320+1=>321
+        num=parseInt( num/10) // 12.3-> 12/10 ->1.2 ->1/10 => 0.1
+    }
+    if(original==reverse){
+        console.log(original,"is a pallindrome")
+        }
+        else{
+            console.log(original,"is not a pallindrome")
+        }
+}
+
+pallindrome()
      </script>
 </body>
 </html>
