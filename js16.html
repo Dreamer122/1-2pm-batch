@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let array=[23,45,78,90,67]
+
+     let new_array=   array.filter(function(v,i,a){
+        let check=false
+        for(let j=2;j<v;j++){
+            if(v%j==0){
+                check=true
+                break
+            }
+
+        }
+        if(check==false){
+            return v
+        }
+
+
+        // return (v%2==0)
+        })
+
+        console.log(new_array)
+
+        // map 
+
+       let mapped_array= array.map(function(v,i,a){
+        // return v**2
+        return v>50
+        })
+        console.log(mapped_array)
+
+        // findIndex
+        let index=array.findIndex(function(v,i,a){
+            return v==90
+        })
+        console.log(index)
+
+        // let array=[23,45,78,90,67]
+        // reduce -> acc=0 
+        // if value is not provided then acc is first element of array
+        // let sum=array.reduce(function(acc,v,i,a){
+        //     return acc+v // 0+23 acc=23+45 =>68
+        //     },0)
+
+        //     console.log(sum)
+        let sum=array.reduce(function(acc,v,i,a){
+            return acc+v // 0+23 acc=23+45 =>68
+            })
+
+            console.log(sum)
+            
+    </script>
+</body>
+</html>
