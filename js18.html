@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- objects  -->
+
+    <script>
+// objects -> key value 
+// {}
+
+let person={
+    name:"john",
+    age:21,
+    phone:234567890
+}
+
+// keys and values 
+console.log(Object.keys(person))
+console.log(Object.values(person))
+console.log(person);
+// document.write(person)
+// accessing elements
+document.write(person.age)
+document.write(person["name"])
+
+// add element 
+person["address"]="abc colony"
+// replace
+person["name"]="poonam"
+// delete
+delete person["phone"]
+console.log(person)
+
+// for in loop
+for(let k in person){
+   document.write(k+":"+person[k]+"<br>")
+
+}
+
+// array in object 
+
+let info={
+    Name:["poonam","abhay","armaan"],
+    age:[21,23,22],
+
+}
+
+console.log(info.Name[0])
+console.log(info.age[2])
+
+const employee={
+    e_name:"anish",
+    last_name:"doe",
+    salary:23000,
+    address:{
+        hno:"12-3b",
+        city:"Faridabad",
+        state:"haryana"
+    },
+    full_name:function(){
+        console.log(this)
+        return this.e_name+this.last_name
+    }
+
+}
+console.log(employee.address.city)
+
+console.log(typeof(employee))
+for (let j in employee){
+    if(typeof(employee[j])!="object"){
+        console.log(typeof(employee[j]))
+        console.log(typeof(employee[j])!="object")
+
+        document.write(j+":"+employee[j]+"<br>")
+    }
+    else{
+        for(let k in employee[j]){
+            document.write(k+":"+employee[j][k]+"<br>")
+    }
+}
+}
+
+console.log(employee.full_name())
+
+
+
+// let a=new Array()
+// let s=new String()
+// let o=new Object()
+    </script>
+</body>
+</html>
