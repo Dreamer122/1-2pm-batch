@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="num"> <br> 
+    <button onclick="textGenerator()">generate words</button>
+<p id="textresult"></p>
+<!--  functions  -->
+
+<script>
+     function  fun(){
+        console.log("Hello");
+     }
+     fun()
+
+    //  array.push(78)
+
+    function add(x,y){ // parameter
+        let username="username"
+        console.log(x+y)
+        return (x+y)
+    }
+    let result=add(3,5) // arguments
+    console.log(result)
+    let num1=7
+    let num2=67
+    add(num1,num2)
+    // console.log(username)
+
+   //x="hello".concat("world")
+
+//    add(6,7,89)
+
+function third(){
+    fun()
+    add(6,7)
+}
+third()
+
+//  calculator
+// 1. 4 functions -> add,sub,mul,div
+// 2 main() -> 3 input  -> 2 input number -> operator
+// 3. condition -> + ->x= add(n1,n2)
+
+
+function textGenerator(){
+    let num =Number( document.getElementById("num").value);
+    let p=document.getElementById("textresult")
+
+    let text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam excepturi quibusdam porro odit nemo ab laudantium soluta aut. Laboriosam, neque, delectus exercitationem quidem commodi nulla nostrum pariatur dignissimos dicta quod maxime repellat quisquam iste saepe natus sunt fugit quo ut impedit distinctio? Dicta, similique sapiente. Nihil officia sint alias debitis eveniet unde obcaecati qui minus neque sit tempora, iure ab praesentium ut dolor? Laudantium consequatur, incidunt molestias velit a ad quasi architecto aliquam hic nostrum illum quisquam? Inventore, alias corporis. Quod nulla distinctio modi voluptate aspernatur iure, quos cum quae veniam deleniti necessitatibus qui reiciendis quia fuga. Perspiciatis, maxime tenetur!"
+    let split_string=text.split(" ")
+    console.log(split_string)
+    let result=split_string.slice(0,num).join(" ")
+    console.log(result)
+    p.innerText=result
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

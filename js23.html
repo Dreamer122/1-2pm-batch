@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="show">clicik</button>
+    <button id="show1">click</button>
+    <button onclick="callfun()">click</button>
+    <button id="show3">click</button>
+    <p id="text"></p>
+    <script>
+        // adeventlistner
+
+        document.getElementById("show").addEventListener("click",callfun)
+        function callfun(e){
+            console.log(e.target.innerText)
+            console.log("hello world");
+        }
+document.getElementById("show1").onclick=callfun
+
+
+function randomevalue(){
+    let v=Math.random()*6
+    document.getElementById("text").innerHTML=v
+}
+document.body.addEventListener("mousemove",randomevalue)
+
+document.querySelector("#show3").addEventListener("click",removeevent)
+
+function removeevent(){
+    document.body.addEventListener("mousemove",randomevalue)
+}
+
+// dice game 
+function rollDice() {
+    let player1=Math.floor(Math.random()*6)+1
+    let player2=Math.floor(Math.random()*6)+1
+
+    if(player1>player2){
+        console.log("player 1 wins")
+        document.getElementById("image").src="image"+player1+".png"
+        document.getElementById("image").src="image"+player1+".png"
+    }
+    else if(player2==player1){
+        console.log("draw")
+    }
+    else{
+        console.log("player 2 wins")
+    }
+}
+
+document.querySelector("#show1").oncontextmenu=rollDice;
+
+    </script>
+
+</body>
+</html>

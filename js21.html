@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <h2 id="text">queryselector</h2>
+    <h3 class="head"> queryselectorall</h3>
+    <h4 class="head"> queryselectorall</h3>
+    <h5 class="head"> queryselectorall</h3>
+    
+    <!-- selectors 
+    maths,date 
+    -->
+    <script>
+        // queryselector , queryselector all
+        let ele=document.querySelector("#text")
+        console.log(ele)
+        let ele1=document.querySelector(".head")
+        console.log(ele1)
+        let ele2=document.querySelector("p")
+        console.log(ele2)
+        let ele3=document.querySelectorAll(".head")
+        console.log(ele3)
+
+        // math 
+        let p=Math.PI
+        console.log(p)
+        console.log(Math.sqrt(169))
+        console.log(Math.SQRT2)
+        console.log(Math.SQRT1_2)
+        console.log(Math.abs(-9))
+        console.log(Math.ceil(7.4))
+        console.log(Math.floor(7.4))
+        console.log(Math.round(5.7))
+        console.log(Math.cbrt(8))
+        console.log(Math.max(7,98,6))
+        console.log(Math.min(7,98,6))
+        console.log(Math.pow(6,2))
+        console.log(Math.random()*10)
+        console.log(Math.trunc(5.6))
+        console.log(Math.sin(Math.PI/180*90))
+        console.log(Math.cos(Math.PI/180*0))
+        console.log(Math.tan(Math.PI/180*45))
+        console.log(Math.log(100))
+        console.log(Math.log2(10))
+        console.log(Math.log10(10))
+        
+// Date
+        let d=new Date()
+        console.log(d)
+        document.write(d.getDate()+"<br>")
+        document.write(d.getDay()+"<br>")
+        document.write(d.getFullYear()+"<br>")
+        document.write(d.toLocaleDateString()+"<br>")
+        document.write(d.toLocaleTimeString()+"<br>")
+        console.log(d.getTime())
+        console.log(Date.now()) 
+        let date1=Date.now()
+        let date3=new Date(date1)
+        console.log(date3)
+       
+// set methods
+        // let date=new Date(2024,3,23,12,34,45);
+        let date=new Date();
+        date.setHours(2)
+        date.setMinutes(0)
+        date.setSeconds(0)
+        console.log(date)
+
+
+        // -> clock 
+        // hourse minnutes seconds AM / pm 
+        // date-> 23 feb 2025 , mon
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        DOM
+    </h1>
+    <p class="text">
+         <span>       Document Object Model</span>
+    </p>
+    <p class="text">
+        SElectors
+    </p>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210908120846/DOM.png" alt="" id="image" style="height: 500px;">
+    <input type="text" name="username" placeholder="enter name" value="hello">
+    
+    <!-- dom 
+    document object model
+    
+    html part manipulated
+
+    selectors 
+    -->
+
+    <script>
+
+        // target by classname
+        // let element=document.getElementsByClassName("text")[0];
+        let element=document.getElementsByClassName("text")[0];
+        console.log(typeof(element))
+        // element.innerHTML="hello"
+        // element.innerText="hello"
+
+        console.log(element)
+
+        // tagname
+        let bytagname=document.getElementsByTagName("h1");
+        console.log(bytagname)
+
+        let byname=document.getElementsByName("username")[0]
+        console.log(byname)
+        byname.value="bye"
+        
+        // document.getElementById()
+        document.getElementById("image").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgSx72BxHkKzS_dD59bZlvxZdN2Wa7aB7vw&s"
+
+    </script>
+</body>
+</html>

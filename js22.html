@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: blueviolet;
+            border: 1px solid #000; 
+        }
+        .text{
+            color: rgb(239, 112, 112);
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p id="show"></p>
+    <button id="btn">stop</button>
+    <button id="btn1">stop timeout</button>
+    <button id="btn1">stop timeout</button>
+    <button id="btn2">remove class</button>
+    
+    <!-- set interval -->
+     <script>
+        function showtime(){
+            var date = new Date();
+            let sec=date.getSeconds()
+            // document.write(sec)
+            document.querySelector("#show").innerHTML=sec
+        }
+
+      let x= setInterval(showtime,1000)
+
+      function removeinterval(){
+
+          clearInterval(x)
+      }
+
+      document.querySelector("#btn").onclick=removeinterval
+
+
+
+
+// setTimeout(function(){
+//     alert("hello")
+// },5000);
+
+// let timeout=setTimeout(showtime,3000)
+
+  document.querySelector("#btn1").onclick=function(){
+    clearTimeout(timeout)
+  }
+
+
+  // css
+  let ptag=document.querySelector("#show") 
+  ptag.classList.add("box","text")
+
+  function classes(){
+    // ptag.classList.remove("box")
+    // ptag.classList.replace("box","box2")
+    ptag.classList.toggle("box")
+  }
+  document.querySelector("#btn2").ondblclick=classes
+
+/*
+
+onclick
+ondblclick
+oncontextmenu (rightclick)
+
+// mouse events 
+ onmouseover
+ onmouseout
+ onmousemove
+ onmousedown
+ onmouseup
+
+ // keyboard 
+
+ onkeypress
+ onkeyup
+ onkeydown
+
+
+ onscroll
+ onresize
+
+
+ form 
+
+ onfocus
+ onblur
+ onchange
+ oninput
+ onsubmit
+ onreset
+
+
+
+*/
+
+  
+
+     </script>
+</body>
+</html>
