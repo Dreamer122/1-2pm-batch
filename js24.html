@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border: 2px solid green;
+            padding: 20px;
+            background-color: antiquewhite;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .parent div{
+            border: 2px solid blue;
+            background-color: rgb(210, 134, 40);
+            height: 200px;
+            width: 200px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">Child 1</div>
+        <div class="child2">Child 2</div>
+        <div class="child3">Child 3</div>
+        <div class="child3">Child 3</div>
+
+
+    </div>
+    <button onclick="createelement()">create element</button>
+    
+    <script>
+        // addEventListener(event,function,boolean)
+        // event: event type
+        // function: function to be executed when event occurs
+        // boolean: true for capturing phase, false for bubbling phase
+
+        let child2=document.querySelector(".child2")
+        document.querySelector(".child2").addEventListener("click",function(e){
+            console.log(e)
+            e.stopPropagation()
+            console.log("Child 2 clicked");
+        })
+        let parenr= document.querySelector(".parent")
+        document.querySelector(".parent").addEventListener("click",function(e){
+            console.log("parent clicked")
+        })
+
+        // event bubbling inside to outside  when value is false
+        // event capturing outside to inside when value is true
+
+        // create and remove element 
+        let count=0;
+        function createelement(){
+            let div=document.createElement("div");
+            div.innerText="this is div"+count          
+            console.log(div)
+            count++
+            document.querySelector(".parent").append(div)
+            div.addEventListener("click",function(){
+                this.remove()
+            })
+
+
+        }
+
+        // DOM traversing 
+       let p= child2.parentElement;
+       console.log(p)
+       let c=p.children;
+    //    let c=p.children[2]
+       console.log(c)
+       for(let i=0;i<c.length;i++){
+        c[i].style.color="yellow"
+       }
+       let sib=child2.nextElementSibling
+       let sib1=child2.previousElementSibling
+       console.log(sib)
+       console.log(sib1)
+
+
+
+
+
+    </script>
+</body>
+</html>
