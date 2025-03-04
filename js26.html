@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+</head>
+<body>
+    <!-- template literal
+    arrow function
+    spread and rest operator
+    destructuring 
+
+    -->
+    <p id="text"> hello im 
+        monika 
+        gola
+    </p>
+
+    <script>
+        // template literal - string interpolation
+        let name="monika gola"
+        let age=23
+        document.write("hello im "+name+" and my age is "+age)
+        document.write(`Hello im ${name} 
+        and my age is ${age}`)
+        document.getElementById("text").innerHTML=` hello
+        im ${name}
+        and my age is ${age}`
+        // arrow function
+
+        function greet(name){
+            console.log(name+"hello",this)
+        }
+
+        let greet1=name=>console.log(name+"hello")
+        
+        // let greet1=(name)=>{
+        //     console.log(name+"hello")
+        // }
+        let greet2=(a,b)=>{
+            console.log("arrow fun",this)
+        return  a+b
+        }
+        // let greet2=(a,b)=> a+b
+        
+let obj={
+    username:"monika",
+    userage:23,
+    fun:function(){
+        console.log(this)
+    },
+    fun2:()=>{
+        console.log("hello"+this)
+    }
+}
+
+obj.fun()
+obj.fun2()
+
+// spread and rest operator 
+let array=[5,7,9]
+let array1=[78,90,...array]
+console.log(...array1)
+
+let obj2={
+    address:"123 abc",
+    ...obj
+}
+
+console.log(obj2)
+
+function sum(b,c,...a){
+console.log( a,b,c)
+}
+sum(6,8,9,65)
+// destructuring
+let [x,y,z]=array
+console.log(x,y,z)
+let [first,...restvalues]=array1
+console.log(first,restvalues)
+
+let {username:n,userage}=obj
+console.log(userage,n)
+
+    </script>
+    
+</body>
+</html>
