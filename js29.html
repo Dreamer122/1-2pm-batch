@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- hoisting 
+    a 
+    b=undefined
+
+    -->
+     <script>
+//          console.log(a) // temporal dead zone
+//         let a=10
+//         console.log(c)
+//         const c=2
+// console.log(b)
+//         var b=20
+fun()
+function fun(){
+    console.log("hello from fun")
+}
+
+// f() tdz
+let f=()=>{
+    console.log("hello from arrow")
+    
+}
+
+//  callback function  hell
+
+// promise 
+
+// synchronous Asynchrounus
+
+// settimeout
+
+setTimeout(()=>{ // 41 -> 2sec start
+    console.log("hello from settimeout")
+},2000)
+console.log("end here") // output
+
+
+
+     </script>
+</body>
+</html>

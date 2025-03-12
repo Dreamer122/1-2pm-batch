@@ -19,9 +19,20 @@
     <form action="" name="form1">
 
         <input type="text" name="username" id="username" placeholder="enter name"> <label for="" class="error" id="uerror"></label> <br>
-        <input type="text" name="password" id="password" placeholder="enter password">
+        <input type="text" name="password" id="password" onfocus="callfun()" onblur="callfun1()" placeholder="enter password">
         <label for="" class="error" id="perror"></label>
         <br>
+        <input type="radio" name="gender" id="male" value="male" ><label for="male">male</label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">female</label>
+       
+       <br>
+       <input type="checkbox" name="hobby" id="hobby" value="reading"/>
+       <label for="hobby">reading</label>
+       <input type="checkbox" name="hobby" id="hobby1" value="swimming" />
+       <label for="hobby1">swimming</label>
+       <input type="checkbox" name="hobby" id="hobby2" value="Cooking" />
+       <label for="hobby1">Cooking</label>
+
         <input type="submit" value="submit form">
     </form>
 
@@ -32,6 +43,8 @@
             let pass=document.getElementById("password")
             let uerror=document.getElementById("uerror")
             let perror=document.getElementById("perror")
+            let gender=document.getElementsByName("gender");
+        let hobby=document.getElementsByName("hobby");
             // regular expression regex
             let regex_user=/^[A-Za-z]+$/
             let regex_pass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/;
@@ -54,11 +67,36 @@
             else{
                 perror.innerHTML=""
             }
+
+            // radio buttons
+            
+            for(let i=0;i<gender.length;i++){
+                if(gender[i].checked){
+                    console.log(gender[i].value)
+                }
+            }
+            let hobbies=""
+            for(let k=0;k<hobby.length;k++){
+                if(hobby[k].checked){
+                    hobbies+=hobby[k].value+" "
+            }
+        }
+            console.log(hobbies)
            
 
         }
+        // onfocus
 
         document.getElementsByName("form1")[0].addEventListener("submit",validation)
+
+
+        function callfun(){
+            document.getElementById("password").style.background="pink"
+        }
+        function callfun1(){
+            document.getElementById("password").style.background="white"
+        }
+
 
     </script>
 </body>
