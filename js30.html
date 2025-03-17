@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <table border="1">
+        <thead>
+            <th>
+                id
+            </th>
+            <th>
+                title
+            </th>
+            <th>
+                category
+            </th>
+            <th>
+                description
+            </th>
+        </thead>
+        <tbody id="body">
+
+        </tbody>
+    </table>
+    <!-- promise
+    -> promise-> states 
+    -> pending
+    -> fulfilled
+    -> reject 
+
+    promise -> fulfilled -> resolve() -> then()
+    promise-> reject-> reject()-> catch()
+    
+    -->
+
+    <script>
+      // const prom=new Promise((resolve,reject)=>{
+      //     console.log("my promise")
+      //     // resolve("hello")
+      //     reject("error occured")
+      // })
+      // console.log(prom)
+
+      //         let age=2
+      //         const prom1=new Promise((resolve,reject)=>{
+      //             if(age>18){
+      //                 resolve("greater than 18")
+      //             }
+      //             else{
+      //                 reject("less than 18")
+      //             }
+      //         })
+      //         // console.log(prom1)
+      //         prom1.then((d)=>{
+      // console.log("then=",d)
+      //         }).catch((e)=>{
+      //             console.log(e)
+      //         })
+
+      const prom2 = new Promise((resolve, reject) => {
+        console.log("promise start");
+        setTimeout(() => {
+          console.log("promise resolved");
+          resolve("promise resultt");
+          // reject("data rejected")
+        }, 2000);
+        console.log("promise end");
+      });
+
+      prom2
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log("error");
+        });
+
+      // fetch api
+
+      const response = fetch("https://fakestoreapi.com/products");
+      console.log("response=", response);
+      response
+        .then((result) => {
+          return result.json();
+        })
+        .then((data) => {
+          console.log(data);
+
+          let tablebody=document.getElementById("body")
+          for(let i=0;i<data.length;i++){
+            let row=document.createElement("tr")
+            let id=document.createElement("td")
+            let title=document.createElement("td")
+            let description=document.createElement("td")
+            let category=document.createElement("td")
+            id.innerHTML=data[i].id
+            title.innerHTML=data[i].title
+            description.innerHTML=data[i].description
+            category.innerHTML=data[i].category
+            row.append(id)
+            row.append(title)
+            row.append(category)
+            row.append(description)
+            tablebody.append(row)
+          } 
+
+
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
